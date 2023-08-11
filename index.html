@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="Sisters Talles Positivos - Ropa para todas las curvas">
+        <meta name="keywords" content="indumentaria, ropa, moda, femenina, mujer, vestir, lookearse, talles">
+        <meta name="author" content="Veronica Capobianco">
+        <meta property="og:title" content="Sisters Talles Positivos">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="./assets/img/logo.png">
+        <meta property="og:description" content="Un espacio donde vestirte es un placer!">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="./assets/css/normalize.css"/>
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="shortcut icon" href="./assets/img/icono.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+        <title>Sisters - Talles Positivos</title>
+    </head>
+    <body>
+        <!--------Header ----------> 
+        <header>            
+            <nav class="navbar">
+                <a class="nav__link" href="#">
+                    <img src="./assets/img/logoAp.png" class="nav__link-logo" alt="logo">
+                </a>
+                <ul class="nav__list">
+                    <li class="nav__list-item">
+                        <a class="nav__list-link active" href="#">Inicio</a>
+                    </li>                    
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="#nosotras">Nosotras</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="#tienda">Tienda</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="#contacto">Contacto</a>
+                    </li>                                              
+                </ul>
+            </nav>
+        </header>
+
+        <!-------- Main ---------->   
+        <main class="hero">
+            <div class="hero__title">
+                <h1>Ropa para todas las curvas</h1>
+                <h3>"Un espacio donde vestirte es un placer!"</h3>
+            </div>
+            <div class="hero__button" id="button">
+                <a class="hero__button-link" href="#registro">Reservar Cita</a> 
+            </div>
+        </main>
+
+        <!-------- Nosotras ---------->
+        <section class="nosotras" id="nosotras">
+            <h2 class="nosotras__title">Sobre Nosotras...</h2>
+            <div class="nosotras__subtitle">
+                <h3>"La hermandad nos potencia"</h3>
+            </div>
+            <div class="nosotras__container">
+                <div class="nosotras__img">
+                    <img src="./assets/img/nosotras.png" alt="nosotras" class="img" />
+                </div>
+                <div class="nosotras__text">
+                    <p><b>SISTERS TALLES POSITIVOS</b> es un espacio creado por emprededoras argentinas que buscamos brindarle una experiencia de compra gratificante a cada una de nuestras clientas.</p>
+                    <p>Representamos el talle y el estilo de cada una, somos todas en nuestra mejor versión, aceptándonos tal y como somos … y desde esa actitud positiva, saliendo al mundo para convertirlo en un lugar mejor.</p>
+                </div>
+            </div>
+            <button class="btn-temporada btn-nosotras" type="button" data-toggle="modal" data-target="#contacto">Contactate</button>
+        </section>
+
+        <!-------- Tienda ---------->
+        <section class="tienda" id="tienda">
+            <h2 class="tienda__title">Conoce nuestras prendas...</h2>
+            <div class="tienda__card">
+                <img src="./assets/img/actual.JPG" class="card-img" alt="Actual">
+                <div class="card-body">
+                    <h3 class="card-title">Rebajas Verano</h3>
+                    <h4 class="card-subtitle">Ultimas prendas</h6>
+                    <a href="#" class="btn-temporada">Ver todo</a>
+                </div>
+            </div>
+            <div class="tienda__card">
+                <img src="./assets/img/promo.JPG" class="card-img" alt="Promociones">
+                <div class="card-body">
+                    <h3 class="card-title">Promociones </h3>
+                    <h4 class="card-subtitle">Dia de la Madre</h6>
+                    <a href="#" class="btn-temporada">La quiero!</a>
+                </div>
+            </div>
+            <div class="tienda__card">
+                <img src="./assets/img/anterior.JPG" class="card-img" alt="Anterior">
+                <div class="card-body">
+                    <h3 class="card-title">Nueva Temporada</h3>
+                    <h4 class="card-subtitle">Invierno 2023</h6>
+                    <a href="#" class="btn-temporada">Ingresar</a>
+                </div>                        
+            </div>
+        </section>
+
+        <!-------- Whatsapp Button ---------->
+        <a href="http://">
+            <picture id="caja">
+                <source srcset="./assets/img/whatsapp.png" media="(min-width:700px)">
+                <img src="./assets/img/whatsappT.png" alt="whatsapp" class="whatsapp" />
+            </picture>
+        </a>
+
+        <!-------- Contacto ---------->
+        <section class="contacto" id="contacto">
+            <div class="contacto__container">
+                <h2 class="contacto__title">Queres saber más?</h2>
+                <figure class="contacto__img">
+                    <img src="./assets/img/logo.png" alt="logo">
+                </figure>
+                <h4 class="contacto__subtitle">Envíanos un mensaje con tu outfit favorito, te asesoramos para que puedas hacer tu compra.</h4>
+                <form class="contacto__form">
+                    <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+                    <input type="telefono" id="telefono" name="telefono" placeholder="Telefono" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <textarea id="mensaje" name="mensaje" rows="5" cols="50" placeholder="Mensaje" required></textarea>
+                    
+                    <a href="#" class="contacto__link">Enviar</a>
+                </form>
+            </div>
+        </section>
+
+        <!-------- Footer ---------->
+        <footer>
+            <div class="footer__container">
+                <address class="footer__address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Nazarre y Gallardo - Barrio Versalles</p>
+                    <p>Buenos Aires - Argentina</p>
+                    <p>+54 11 6806-7473</p>
+                </address>
+                <ul class="footer__social">
+                    <li><a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                </ul>
+                <ul class="footer__nav">
+                    <li><a class="nav-item2" href="#tienda">Tienda</a></li>                        
+                    <li><a class="nav-item2" href="#nosotras">Nosotras</a></li>
+                    <li><a class="nav-item2" href="mailto:sister.positivos@gmail.com">Contacto</a></li>
+                </ul>
+                <div class="footer__credits">
+                    <p>© 2023 - Sisters Talles Positivos</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+
