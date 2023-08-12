@@ -27,7 +27,7 @@
                 </a>
                 <ul class="nav__list">
                     <li class="nav__list-item">
-                        <a class="nav__list-link active" href="#">Inicio</a>
+                        <a class="nav__list-link" href="#">Inicio</a>
                     </li>                    
                     <li class="nav__list-item">
                         <a class="nav__list-link" href="#nosotras">Nosotras</a>
@@ -46,16 +46,16 @@
         <main class="hero">
             <div class="hero__title">
                 <h1>Ropa para todas las curvas</h1>
-                <h3>"Un espacio donde vestirte es un placer!"</h3>
+                <h5>"Un espacio donde vestirte es un placer!"</h5>
             </div>
             <div class="hero__button" id="button">
-                <a class="hero__button-link" href="#registro">Reservar Cita</a> 
+                <a class="hero__button-link" href="https://wa.me/541130954760?text=Hola!%20Quiero%20reservar%20una%20cita" target="_blank">Reservar Cita</a> 
             </div>
         </main>
 
         <!-------- Nosotras ---------->
-        <section class="nosotras" id="nosotras">
-            <h2 class="nosotras__title">Sobre Nosotras...</h2>
+        <section class="nosotras" >
+            <h2 class="nosotras__title" id="nosotras">Sobre Nosotras...</h2>
             <div class="nosotras__subtitle">
                 <h3>"La hermandad nos potencia"</h3>
             </div>
@@ -68,50 +68,53 @@
                     <p>Representamos el talle y el estilo de cada una, somos todas en nuestra mejor versión, aceptándonos tal y como somos … y desde esa actitud positiva, saliendo al mundo para convertirlo en un lugar mejor.</p>
                 </div>
             </div>
-            <button class="btn-temporada btn-nosotras" type="button" data-toggle="modal" data-target="#contacto">Contactate</button>
+            <a class="btn-temporada btn-nosotras" href="#contacto">Contactate</a>
         </section>
 
         <!-------- Tienda ---------->
-        <section class="tienda" id="tienda">
-            <h2 class="tienda__title">Conoce nuestras prendas...</h2>
-            <div class="tienda__card">
-                <img src="./assets/img/actual.JPG" class="card-img" alt="Actual">
-                <div class="card-body">
-                    <h3 class="card-title">Rebajas Verano</h3>
-                    <h4 class="card-subtitle">Ultimas prendas</h6>
-                    <a href="#" class="btn-temporada">Ver todo</a>
+        <section class="tienda" >
+            <h2 class="tienda__title" id="tienda">Conoce nuestras prendas...</h2>
+            <div class="tienda__container">
+                <div class="tienda__card">
+                    <img src="./assets/img/actual.JPG" class="card-img" alt="Actual" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Rebajas Verano</h3>
+                        <h4 class="card-subtitle">Ultimas prendas</h6>
+                        <a href="#" class="btn-temporada">Ver todo</a>
+                    </div>
+                </div>
+                <div class="tienda__card">
+                    <img src="./assets/img/promo.JPG" class="card-img" alt="Promociones" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Promociones </h3>
+                        <h4 class="card-subtitle">Dia de la Madre</h6>
+                        <a href="#" class="btn-temporada">La quiero!</a>
+                    </div>
+                </div>
+                <div class="tienda__card">
+                    <img src="./assets/img/anterior.JPG" class="card-img" alt="Anterior" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Nueva Temporada</h3>
+                        <h4 class="card-subtitle">Invierno 2023</h6>
+                        <a href="#" class="btn-temporada">Ingresar</a>
+                    </div>                        
                 </div>
             </div>
-            <div class="tienda__card">
-                <img src="./assets/img/promo.JPG" class="card-img" alt="Promociones">
-                <div class="card-body">
-                    <h3 class="card-title">Promociones </h3>
-                    <h4 class="card-subtitle">Dia de la Madre</h6>
-                    <a href="#" class="btn-temporada">La quiero!</a>
-                </div>
-            </div>
-            <div class="tienda__card">
-                <img src="./assets/img/anterior.JPG" class="card-img" alt="Anterior">
-                <div class="card-body">
-                    <h3 class="card-title">Nueva Temporada</h3>
-                    <h4 class="card-subtitle">Invierno 2023</h6>
-                    <a href="#" class="btn-temporada">Ingresar</a>
-                </div>                        
-            </div>
+            
         </section>
 
         <!-------- Whatsapp Button ---------->
-        <a href="http://">
+        <a href="https://wa.me/541130954760?text=Hola!%20Quiero%20reservar%20una%20cita" target="_blank">
             <picture id="caja">
-                <source srcset="./assets/img/whatsapp.png" media="(min-width:700px)">
+                <source srcset="./assets/img/whatsapp.png" media="(min-width:500px)">
                 <img src="./assets/img/whatsappT.png" alt="whatsapp" class="whatsapp" />
             </picture>
         </a>
 
         <!-------- Contacto ---------->
-        <section class="contacto" id="contacto">
+        <section class="contacto" >
             <div class="contacto__container">
-                <h2 class="contacto__title">Queres saber más?</h2>
+                <h2 class="contacto__title" id="contacto">Queres saber más?</h2>
                 <figure class="contacto__img">
                     <img src="./assets/img/logo.png" alt="logo">
                 </figure>
@@ -131,23 +134,26 @@
         <footer>
             <div class="footer__container">
                 <address class="footer__address">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Nazarre y Gallardo - Barrio Versalles</p>
+                    <a href="https://goo.gl/maps/JsmAhJ6hrM8nvPZW8" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+                    <p>Nazarre y Gallardo (Versalles)</p>
                     <p>Buenos Aires - Argentina</p>
                     <p>+54 11 6806-7473</p>
                 </address>
-                <ul class="footer__social">
-                    <li><a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                </ul>
-                <ul class="footer__nav">
-                    <li><a class="nav-item2" href="#tienda">Tienda</a></li>                        
-                    <li><a class="nav-item2" href="#nosotras">Nosotras</a></li>
-                    <li><a class="nav-item2" href="mailto:sister.positivos@gmail.com">Contacto</a></li>
-                </ul>
-                <div class="footer__credits">
-                    <p>© 2023 - Sisters Talles Positivos</p>
+                <figure class="footer__logo">
+                    <img src="./assets/img/icono.png" alt="logo">
+                </figure>
+                <div class="footer__social">
+                    <ul class="footer__social-list">
+                        <li><a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                    <ul class="footer__social-links">
+                        <li><a class="nav-item2" href="#tienda">Tienda</a></li>                        
+                        <li><a class="nav-item2" href="#nosotras">Nosotras</a></li>
+                        <li><a class="nav-item2" href="mailto:sister.positivos@gmail.com">Contacto</a></li>
+                    </ul>
+                    <li><p class="footer__credits">© 2023 - Sisters Talles Positivos</p></li>
                 </div>
             </div>
         </footer>

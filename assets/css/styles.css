@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/pistoleer');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
 
 *{
     margin: 0;
@@ -6,16 +7,18 @@
     box-sizing: border-box;
     list-style: none;
     scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
 }
 
 :root{
-    --button: #51E5FF;
+    --background: #51E5FF;
     --title: #FFD6C0;
     --link: #440381;
     --light: #FFA5A5;
     --darker: #08011a;
     --pink: #EC368D;
     --white: #FFF;
+    --gray: #737389;
 }
 
 a {
@@ -24,15 +27,23 @@ a {
     font-weight: bold;
 }
 
+.a:hover, .hero__button-link:hover, a.btn-temporada:hover{
+    opacity: 0.85;
+}
+
 @media screen and (min-width: 320px) {
 
+    header{
+        display: flex;
+        justify-content: center;
+        background-color: var(--light);
+    }
     .navbar{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
         padding: 1rem 0;
-        background-color: var(--light);
     }
     
     .nav__link-logo{
@@ -46,6 +57,10 @@ a {
         align-items: center;
         gap: 1.5rem;
         font-size: 1rem;
+    }
+
+    .nav__list-link:hover{
+        color: var(--link);
     }
     
     .hero {
@@ -80,16 +95,12 @@ a {
         color: var(--white);
     }
     
-    .hero__button:hover{
-        opacity: 0.9;
-    }
-    
     .nosotras{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        gap: 2rem;
+        gap: 2.5rem;
         height: 180vh;
         background-color: var(--title);
     }
@@ -108,14 +119,13 @@ a {
     }
     
     .nosotras__title{
-        font-size: 2rem;
-        font-family: 'Gochi Hand', cursive;
+        font-size: 1.5rem;
     }
     
     .nosotras__subtitle{
         text-align: center;
         align-items: center;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-style: italic;
     }
     
@@ -129,7 +139,7 @@ a {
     }
     
     .tienda{
-        height: 280vh;
+        height: 270vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -141,11 +151,18 @@ a {
         background-size: cover;
         gap: 3rem;
     }
+
+    .tienda__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 3rem;
+    }
     
     .tienda__title{
         text-align: center;
-        font-size: 2rem;
-        font-family: 'Gochi Hand', cursive;
+        font-size: 1.5rem;
     }
     
     .tienda__card{    
@@ -181,21 +198,17 @@ a {
         box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.5);
     }
     
-    .btn-temporada:hover, .btn-nosotras:hover{
-        opacity: 0.9;
-    }
-    
     .whatsapp{
         position: fixed;
-        right: 10px;
+        right: 5px;
         bottom: 15px;
         width: 40px;
     }
     
     .whatsapp:hover{
-        opacity: 80%;
+        transition: all 0.5s ease-in-out;
+        transform: scale(1.1);
     }
-    
     
     .contacto{
         display: flex;
@@ -203,19 +216,19 @@ a {
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        min-height: 180vh;
+        height: 180vh;
         color: var(--darker);
         background: url('../img/layered-waves.png') no-repeat;
         background-size: cover;
     }    
     
     .contacto__title{
-        font-size: 2rem;
-        font-family: 'Gochi Hand', cursive;
+        font-size: 1.5rem;
+        text-align: center;
     }
     
     .contacto__subtitle{
-        width: 70%;
+        width: 80%;
     }
     
     .contacto__container{
@@ -224,6 +237,7 @@ a {
         align-items: center;
         justify-content: center;
         width: 90%;
+        max-width: 500px;
         gap: 2rem;
     }
     
@@ -232,10 +246,11 @@ a {
     }
     
     .contacto__form input{
-        height: 30px;
+        height: 40px;
         padding: 0.5rem;
         border: none;
         border-radius: 5px;
+        box-shadow: 1px 1px 1px 0px rgba(0,0,0, 0.3);
     }
     
     .contacto__form textarea{
@@ -243,6 +258,7 @@ a {
         border: none;
         border-radius: 5px;
         resize: none;
+        box-shadow: 1px 1px 1px 0px rgba(0,0,0, 0.3);
     }
     
     .contacto__form{
@@ -260,20 +276,16 @@ a {
         text-align: center;
         background-color:var(--link) ;
         align-self: center;
-        color:#fff;
+        color:var(--white);
         padding: 0.8rem 2rem;
         border-radius: 5px;
         font-weight: bold;
         box-shadow: 3px 3px 3px 0px rgba(92, 91, 91, 0.522);
     }
     
-    .contacto__link:hover{
-        opacity: 0.8;
-    }
-    
     .footer__container{
         height: 100vh;
-        color: var(--light);
+        color: var(--white);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -290,26 +302,42 @@ a {
         gap: 2rem;
     }
 
-    .fa-location-dot{
-        font-size: 2rem;
+    .footer__logo img{
+        display: none;
     }
 
-    footer ul{
+    a .fa-location-dot{
+        font-size: 2rem;
+        color: var(--white);
+    }
+
+    .footer__social{
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__social-list{
+        display: flex;
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    .footer__social a{
+        color: var(--white);
+        font-size: 1rem;
+    }
+
+    .footer__social-links{
         display: flex;
         gap: 2rem;
     }
 
-    .footer__social a{
-        color: var(--light);
-        font-size: 1.5rem;
-    }
-
-    .footer__nav a{
-        color: var(--light);
+    .footer__social-links a{
+        color: var(--white);
         font-size: 1rem;
     }
-
-
 
     footer a:hover{
         opacity: 80%;
@@ -325,12 +353,22 @@ a {
     .nosotras{
         height: 160vh;
     }
+
+    .hero__title{
+        font-size: 1.3rem;
+    }
+
+    .whatsapp{
+        width: 45px;
+        right: 10px;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .navbar{
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        width: 80%;
     }
 
     .nosotras{
@@ -348,28 +386,87 @@ a {
         font-size: medium;
     }
 
-    
-}
-
-
-
-
-/* 
-@media screen and (min-width: 480px) {
+    .whatsapp{
+        width: 50px;
+        right: 15px;
+    }
 
 }
-
-
 
 @media screen and (min-width: 1024px) {
 
+    .nosotras{
+        height: 120vh;
+    }
+    
+    .nosotras__container{
+        flex-direction: row;
+        gap: 2rem;
+        width: 60%;
+    }
+
+    .btn-nosotras{
+        width: 10%;
+        font-size: medium;
+    }
+    
+    .hero__title{
+        font-size: 2rem;
+    }
+
+    .tienda{
+        height: 120vh;
+        justify-content: center;
+    }
+    
+    .tienda__container{
+        flex-direction: row;
+    }
+    
+    .footer__container{
+        flex-direction: row;
+        height: 55vh;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 4.5rem;
+    }
+
+    .footer__address{
+        width: 30%;
+    }
+
+    .footer__logo img{
+        display: block;
+        width: 120px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .footer__social{
+        width: 30%;
+        gap: 3.5rem;
+    }
+
+    .footer__social-list, .footer__social-links{
+        gap: 3rem;
+    }
 }
 
 @media screen and (min-width: 1200px) {
+
+    .nosotras__title, .tienda__title, .contacto__title{
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    .contacto{
+        height: 150vh;
+    }
 
 }
 
 @media (min-width: ) and (orientation: landscape) {
 
 }
- */
+
