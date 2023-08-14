@@ -1,5 +1,5 @@
-@import url('https://fonts.cdnfonts.com/css/pistoleer');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
 
 *{
     margin: 0;
@@ -27,7 +27,7 @@ a {
     font-weight: bold;
 }
 
-.a:hover, .hero__button-link:hover, a.btn-temporada:hover{
+.a:hover, .hero__button-link:hover, a.btn-temporada:hover, .contacto__link:hover{
     opacity: 0.85;
 }
 
@@ -99,9 +99,10 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         gap: 2.5rem;
         height: 180vh;
+        padding: 0rem 2rem;
         background-color: var(--title);
     }
 
@@ -139,25 +140,26 @@ a {
     }
     
     .tienda{
-        height: 270vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         background-color: #ffa5a5;
         background: linear-gradient(90deg, rgba(255, 165, 165, 0.1) 13%, rgba(255, 214, 192, 0.1) 100%), url('../img/layered-wave.png');
         background-repeat: no-repeat;
         background-size: cover;
         gap: 3rem;
+        padding: 2rem 1rem;
     }
 
     .tienda__container{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: flex-start;
         gap: 3rem;
+        margin-top: 3rem;
     }
     
     .tienda__title{
@@ -171,15 +173,18 @@ a {
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.5);
+        background-color: var(--title);
     }
     
     img.card-img {
-        width: 300px;
+        width: 280px;
         border-radius: 5px;
     }
     
     .card-body{ 
-        width: 75%;
         display: flex; 
         flex-direction: column;
         justify-content: center;
@@ -188,8 +193,7 @@ a {
     }
     
     .btn-temporada{
-        width: 50%;
-        padding: 0.8rem 0;
+        padding: 1rem;
         color: var(--white);
         background-color: var(--link);
         border-radius: 5px;
@@ -198,6 +202,47 @@ a {
         box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.5);
     }
     
+    .tienda__showroom-item,.tienda__showroom-item2{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .tienda__hero{
+        width: 80%;
+        text-align: end;
+        font-family: 'Courgette', cursive;
+        font-size: 2rem;
+        
+    }
+
+    .brand{
+        color: var(--link);
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    video{
+        border: 3px solid var(--darker);
+        width: 300px;
+    }
+
+    .tienda__text{
+        line-height: 1.5;
+        width: 85%;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1.3rem;
+    }
+
+    .tienda__showroom-item2 img{
+        width: 300px;
+        border: 3px solid var(--darker);
+    }
+
     .whatsapp{
         position: fixed;
         right: 5px;
@@ -221,6 +266,13 @@ a {
         background: url('../img/layered-waves.png') no-repeat;
         background-size: cover;
     }    
+
+    .contacto__header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
     
     .contacto__title{
         font-size: 1.5rem;
@@ -229,8 +281,14 @@ a {
     
     .contacto__subtitle{
         width: 80%;
+        max-width: 600px;
+        text-align: center;
     }
     
+    .contacto__img2 img{
+        display: none;
+    }
+
     .contacto__container{
         display: flex;
         flex-direction: column;
@@ -303,7 +361,8 @@ a {
     }
 
     .footer__logo img{
-        display: none;
+        width: 100px;
+        border-radius: 50%;
     }
 
     a .fa-location-dot{
@@ -324,9 +383,9 @@ a {
         justify-items: center;
     }
 
-    .footer__social a{
+    .footer__social-list a{
         color: var(--white);
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .footer__social-links{
@@ -358,6 +417,14 @@ a {
         font-size: 1.3rem;
     }
 
+    .tienda__showroom-item,.tienda__showroom-item2{
+        max-height: 80vh;
+    }
+
+    video, .tienda__showroom-item2 img{
+        width: 350px;
+    }
+
     .whatsapp{
         width: 45px;
         right: 10px;
@@ -382,8 +449,24 @@ a {
     }
 
     .btn-nosotras{
-        width: 20%;
+        width: 100%;
         font-size: medium;
+    }
+
+    .tienda__hero{
+        width: 88%;
+    }
+
+    video{
+        width: 450px;
+    }
+
+    .tienda__showroom{
+        width: 70%;
+    }
+
+    .tienda__showroom-item2 img{
+        width: 450px;
     }
 
     .whatsapp{
@@ -395,18 +478,19 @@ a {
 
 @media screen and (min-width: 1024px) {
 
-    .nosotras{
-        height: 120vh;
+    .nosotras__text{
+        width: 40%;
     }
     
     .nosotras__container{
         flex-direction: row;
-        gap: 2rem;
-        width: 60%;
+        gap: 2.5rem;
+        width: 50%;
+        justify-content: center;
     }
 
     .btn-nosotras{
-        width: 10%;
+        width: 20%;
         font-size: medium;
     }
     
@@ -415,12 +499,43 @@ a {
     }
 
     .tienda{
-        height: 120vh;
-        justify-content: center;
+        height: 310vh;
     }
-    
+
     .tienda__container{
         flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .tienda__showroom{
+        width: 80%;
+        flex-direction: row;
+    }
+
+    .tienda__showroom-item{
+        flex-direction: row;
+    }
+
+    .tienda__showroom-item2{
+        flex-direction: row-reverse;
+    }
+
+    .tienda__text{
+        font-size: 1.rem;
+    }
+
+    .contacto__img2 img{
+        display: flex;
+        width: 400px;
+    }
+
+    .contacto__container{
+        flex-direction: row;
+        align-items: flex-end;
+        justify-items: space-between;
+        padding: 2rem 0;
+        gap: 4rem;
     }
     
     .footer__container{
@@ -460,8 +575,27 @@ a {
         padding-top: 1rem;
     }
 
+    .tienda{
+        height: 280vh;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0;
+    }
+
+    .tienda__container{
+        align-items: flex-end;
+    }
+    
+    .tienda__showroom{
+        width: 60%;
+    }
+
+    .tienda__showroom-item, .tienda__showroom-item2{
+        height: 70vh;
+    }
+
     .contacto{
-        height: 150vh;
+        height: 180vh;
     }
 
 }
