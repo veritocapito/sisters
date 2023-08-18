@@ -34,35 +34,60 @@ a {
 @media screen and (min-width: 320px) {
 
     header{
-        display: flex;
-        justify-content: center;
+        height: 90px;
         background-color: var(--light);
     }
     .navbar{
         display: flex;
-        flex-direction: column;
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
         align-items: center;
-        gap: 0.5rem;
-        padding: 1rem 0;
+        justify-content:space-between;
     }
     
     .nav__link-logo{
-        width: 250px;
-        margin: 1rem 0;
+        width: 200px;
     }
     
     .nav__list{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 2rem;
         font-size: 1rem;
+    }
+
+    .nav__input, .nav__list{
+        display: none;
     }
 
     .nav__list-link:hover{
         color: var(--link);
     }
+
+    .nav__label{
+        cursor: pointer;
+    }
+
+    .nav__list{
+        position: fixed;
+        top: 90px;
+        background-color: var(--light);
+        width: 100vw;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.2rem 0;
+        justify-content: center;
+        clip-path: polygon(0 0 , 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.5s ease-in-out;
+    }
     
+    .nav__input:checked + .nav__list{
+        clip-path: polygon(0 0 , 100% 0, 100% 100%, 0 100%);
+        
+    }
     .hero {
         color: var(--white);
         background-image: repeating-linear-gradient(90deg, rgba(30, 30, 30, 0.541) 0px, rgba(30, 30, 30, 0.541) 42px,rgba(32, 32, 32, 0.541) 42px, rgba(32, 32, 32, 0.541) 84px,rgba(33, 33, 33, 0.541) 84px, rgba(33, 33, 33, 0.541) 126px,rgba(31, 31, 31, 0.541) 126px, rgba(31, 31, 31, 0.541) 168px,rgba(31, 31, 31, 0.541) 168px, rgb(31, 31, 31, 0.541) 210px,rgba(32, 32, 32, 0.541) 210px, rgb(32, 32, 32,0.541) 252px,rgb(34, 34, 34,0.541) 252px, rgb(34, 34, 34, 0.541) 294px,rgb(33, 33, 33, 0.541) 294px, rgb(33, 33, 33, 0.541) 336px), url('../img/mesa_1280.jpg' );
@@ -177,7 +202,7 @@ a {
         box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.5);
         background-color: var(--title);
     }
-    
+
     img.card-img {
         width: 280px;
         border-radius: 5px;
@@ -379,10 +404,21 @@ a {
         gap: 2rem;
     }
 
+    .footer__logo:hover{
+        opacity: 1;
+    }
+
     .footer__logo img{
         width: 100px;
         border-radius: 50%;
+        transition: all 5s ease-in-out;
     }
+
+    .footer__logo img:hover{
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+
 
     a .fa-location-dot{
         font-size: 2rem;
@@ -425,10 +461,6 @@ a {
 
 @media screen and (min-width: 425px) {
 
-    .nav__list{
-        flex-direction: row;
-    }
-
     .hero__title{
         font-size: 1.3rem;
     }
@@ -450,6 +482,18 @@ a {
         width: 80%;
     }
 
+    .nav__list{
+        clip-path: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: static;
+    }
+
+    .nav__label{
+        display: none;
+    }
+
     .nosotras__container{
         flex-direction: row;
         gap: 2rem;
@@ -459,6 +503,12 @@ a {
     .btn-nosotras{
         max-width: 50%;
         font-size: medium;
+    }
+
+        
+    .tienda__card:hover{
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.1);
     }
 
     .tienda__hero{

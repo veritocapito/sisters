@@ -20,11 +20,16 @@
     </head>
     <body>
         <!-- Header --> 
-        <header>            
+        <header id="home">            
             <nav class="navbar">
                 <a class="nav__link" href="#">
                     <img src="./assets/img/logoAp.png" class="nav__link-logo" alt="logo">
                 </a>
+                <label for="menu" class="nav__label">
+                    <img src="./assets/img/menu.png" alt="menu" class="nav:img">
+                </label>
+                <input type="checkbox" name="menu" id="menu" class="nav__input">
+
                 <ul class="nav__list">
                     <li class="nav__list-item">
                         <a class="nav__list-link" href="#">Inicio</a>
@@ -46,7 +51,7 @@
         <main class="hero">
             <div class="hero__title">
                 <h1>Ropa para todas las curvas</h1>
-                <h5>"Un espacio donde vestirte es un placer!"</h5>
+                <h4>"Un espacio donde vestirte es un placer!"</h5>
             </div>
             <div class="hero__button" id="button">
                 <a class="hero__button-link" href="https://wa.me/541130954760?text=Hola!%20Quiero%20reservar%20una%20cita" target="_blank">Reservar Cita</a> 
@@ -80,7 +85,7 @@
                     <div class="card-body">
                         <h3 class="card-title">Rebajas Verano</h3>
                         <h4 class="card-subtitle">Ultimas prendas</h4>
-                        <a href="#" class="btn-temporada">Ver todo</a>
+                        <a href="#home" class="btn-temporada">Ver todo</a>
                     </div>
                 </div>
                 <div class="tienda__card">
@@ -88,7 +93,7 @@
                     <div class="card-body">
                         <h3 class="card-title">Promociones </h3>
                         <h4 class="card-subtitle">Dia de la Madre</h4>
-                        <a href="#" class="btn-temporada">La quiero!</a>
+                        <a href="#home" class="btn-temporada">La quiero!</a>
                     </div>
                 </div>
                 <div class="tienda__card">
@@ -96,7 +101,7 @@
                     <div class="card-body">
                         <h3 class="card-title">Nueva Temporada</h3>
                         <h4 class="card-subtitle">Invierno 2023</h4>
-                        <a href="#" class="btn-temporada">Ingresar</a>
+                        <a href="#home" class="btn-temporada">Ingresar</a>
                     </div>                        
                 </div>
             </div>
@@ -175,9 +180,9 @@
                     <p>Buenos Aires - Argentina</p>
                     <p>+54 11 6806-7473</p>
                 </address>
-                <figure class="footer__logo">
+                <a href="#home" class="footer__logo">
                     <img src="./assets/img/icono.png" alt="logo">
-                </figure>
+                </a>
                 <div class="footer__social">
                     <ul class="footer__social-list">
                         <li><a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
