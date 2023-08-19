@@ -14,7 +14,7 @@
     --background: #51E5FF;
     --title: #FFD6C0;
     --link: #440381;
-    --light: #FFA5A5;
+    --light: rgb(255, 165, 165);
     --darker: #08011a;
     --pink: #EC368D;
     --white: #FFF;
@@ -34,9 +34,14 @@ a {
 @media screen and (min-width: 320px) {
 
     header{
-        height: 90px;
+        top: 0px;
+        position: sticky;
+        height: 13vh;
+        width: 100%;
         background-color: var(--light);
+        box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
     }
+
     .navbar{
         display: flex;
         height: 100%;
@@ -70,7 +75,7 @@ a {
     }
 
     .nav__list{
-        position: fixed;
+        position: absolute;
         top: 90px;
         background-color: var(--light);
         width: 100vw;
@@ -84,10 +89,10 @@ a {
         transition: clip-path 0.5s ease-in-out;
     }
     
-    .nav__input:checked + .nav__list{
+    .nav__input:checked + .nav__list {
         clip-path: polygon(0 0 , 100% 0, 100% 100%, 0 100%);
-        
     }
+
     .hero {
         color: var(--white);
         background-image: repeating-linear-gradient(90deg, rgba(30, 30, 30, 0.541) 0px, rgba(30, 30, 30, 0.541) 42px,rgba(32, 32, 32, 0.541) 42px, rgba(32, 32, 32, 0.541) 84px,rgba(33, 33, 33, 0.541) 84px, rgba(33, 33, 33, 0.541) 126px,rgba(31, 31, 31, 0.541) 126px, rgba(31, 31, 31, 0.541) 168px,rgba(31, 31, 31, 0.541) 168px, rgb(31, 31, 31, 0.541) 210px,rgba(32, 32, 32, 0.541) 210px, rgb(32, 32, 32,0.541) 252px,rgb(34, 34, 34,0.541) 252px, rgb(34, 34, 34, 0.541) 294px,rgb(33, 33, 33, 0.541) 294px, rgb(33, 33, 33, 0.541) 336px), url('../img/mesa_1280.jpg' );
@@ -119,14 +124,14 @@ a {
     .hero__button-link{
         color: var(--white);
     }
-    
+
     .nosotras{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 2.5rem;
-        padding: 5rem 2rem;
+        padding: 8rem 2rem 5rem 2rem;
         background-color: var(--title);
     }
     
@@ -174,7 +179,7 @@ a {
         background-repeat: no-repeat;
         background-size: cover;
         gap: 3rem;
-        padding: 4rem 1rem;
+        padding: 7rem 1rem 1rem 1rem;
     }
 
     .tienda__container{
@@ -476,6 +481,12 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+    
+    header{
+        top: unset;
+        position: unset;
+    }
+    
     .navbar{
         flex-direction: row;
         justify-content: space-between;
@@ -488,6 +499,7 @@ a {
         flex-direction: row;
         justify-content: flex-end;
         position: static;
+        font-size: 0.8rem;
     }
 
     .nav__label{
@@ -527,6 +539,18 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .nav__list{
+        font-size: 0.9rem;
+    }
+
+    .hero{
+        height: 87vh;
+    }
+
+    .nosotras{
+        padding-top: 3rem;
+    }
 
     .nosotras__text{
         width: 40%;
@@ -603,6 +627,10 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
+
+    .nav__list{
+        font-size: 1rem;
+    }
 
     .nosotras__title, .tienda__title, .contacto__title{
         font-size: 2rem;
