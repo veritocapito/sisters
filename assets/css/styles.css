@@ -76,7 +76,7 @@ a {
 
     .nav__list{
         position: absolute;
-        top: 90px;
+        top: 80px;
         background-color: var(--light);
         width: 100vw;
         left: 0;
